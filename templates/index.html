@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Train_Booking platform</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <p>Welcome TO BookYourTrain platform</p>
+        
+        <form action="/Awailable" method="POST">
+            <p>Awailable seate number are:</p><button type="submit">Click Here </button>
+            
+        </form>
+        <p>{{seates}}</p>
+
+        <form action="/Awailable/position" method="POST">
+            <p>Awailable seate position are:</p>
+            <button type="submit">Click Here </button>
+            
+        </form>
+        <p>{{position}}</p>
+
+        <form action="/BookSeat" method='post'>
+            <select id="BookSeatDropdown" name="BookSeat" required>
+                <option value="">select Option</option>
+                {%for option in Options%}
+                
+                <option value="{{option.value}}">{{option.text}}</option>
+                {%endfor%}
+            </select>
+            <button type="submit">BookSeat</button>
+        </form>
+        <p>{{message1}}</p>
+        
+
+
+        <form action="/CancelSeat" method='post'>
+            <select id="CancelSeatDropdown" name="CancelSeatRow" required>
+                <option value="">select Option</option>
+                {%for option1 in Pos1%}
+                
+                <option value="{{option1.value}}">{{option1.text}}</option>
+                {%endfor%}
+                
+            </select>
+            <select id="CancelSeatDropdown" name="CancelSeatCol" required>
+                <option value="">select Option</option>
+                {%for option2 in Pos2%}
+                
+                <option value="{{option2.value}}">{{option2.text}}</option>
+                {%endfor%}
+            </select>
+            <button type="submit">CancleSeat</button>
+        </form>
+        <p>{{message2}}</p>
+    </body>
+</html>
