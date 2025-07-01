@@ -1,0 +1,38 @@
+/* style.css */
+
+/* Basic styling for the whole page */
+body {
+    font-family: sans-serif; /* Use a common, readable font */
+    /* Centering: */
+    text-align: center; /* Centers text and inline/inline-block elements */
+    margin-top: 50px; /* Add some space from the top */
+}
+
+/* Styling for the button element */
+button {
+    background-color: #007bff; /* Bootstrap primary blue color */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Space inside the button (top/bottom, left/right) */
+    border: none; /* Remove the default border */
+    border-radius: 5px; /* Round the corners */
+    cursor: pointer; /* Change cursor to a hand on hover */
+    font-size: 16px; /* Increase font size */
+    transition: background-color 0.3s ease; /* Smooth color change on hover */
+}
+
+/* Styling for the button when you hover over it */
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/*
+   If you wanted to center a block-level element like a div or form,
+   you often use margin: auto and a width:
+*/
+ .container {
+    width: 80%; /* Set a width */
+    margin: 20px auto; /* Center horizontally */
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: left; /* Override body centering if needed */
+} 
